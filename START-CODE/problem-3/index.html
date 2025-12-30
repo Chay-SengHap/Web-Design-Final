@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Problem-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind (Offline) -->
+    <script src="../tailwind-browser.js"></script>
+</head>
+
+<body class="flex justify-center items-center h-[100vh] w-full">
+    <div class="bg-gray-200 w-[400px] h-[500px] flex justify-center items-center">
+        <div class="bg-white w-[90%] h-[90%] rounded-lg">
+            
+        
+            <div class="bg-blue-400 h-[200px] p-4 text-center flex justify-center items-center text-white font-semibold text-lg">
+               CADT-Cambodia Acedemy of Digital Technology 
+            </div>
+            <div class="grid grid-cols-3 items-center justify-center text-center">
+                <button id="aboutUs" class="bg-blue-500 p-2 text-white">About Us</button>
+                <button id="program" class="bg-gray-200 p-2">Programs</button>
+                <button id="contact" class="bg-gray-200 p-2">Contact</button>
+            </div>
+            <div id="content" class="p-4">
+                Cambodia Acedemy of Digital Technology- A leading tech eduacation institution in Cambodia. we develop skilled IT professiontal through innovative program in CS , SE , DB
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+    <script>
+        const aboutUs = document.getElementById('aboutUs')
+        const program = document.getElementById('program')
+        const contact = document.getElementById('contact')
+        let content = document.getElementById('content')
+
+
+
+        aboutUs.addEventListener('click' , ()=>{
+            content.innerHTML = 'Cambodia Acedemy of Digital Technology- A leading tech eduacation institution in Cambodia. we develop skilled IT professiontal through innovative program in CS , SE , DB'
+            aboutUs.classList = 'bg-blue-500 p-2'
+            program.classList = "bg-gray-200 p-2"
+            contact.classList = "bg-gray-200 p-2"
+        })
+        program.addEventListener('click' , ()=>{
+            content.innerHTML = "Program at CADT , Bachelor's in CS , SE and DB"
+            program.classList = "bg-blue-500 p-2"
+            aboutUs.classList = "bg-gray-200 p-2"
+            contact.classList = "bg-gray-200 p-2"
+        })
+        contact.addEventListener('click' , ()=>{
+            content.innerHTML = 'Contact us . Address :  6A , Prek Leap , Phnom Penh'
+            program.classList = "bg-gray-200 p-2"
+            aboutUs.classList = "bg-gray-200 p-2"
+            contact.classList = "bg-blue-500 p-2"
+        })
+    </script>
+
+</body>
+
+</html>
